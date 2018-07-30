@@ -407,7 +407,7 @@ int handleoutput( int fd )
                 fprintf(stderr, "SSHPASS detected prompt. Sending password.\n");
 	    write_pass( fd );
 	    state1=0;
-	    prevmatch=1;
+	    //prevmatch=1; //jusmeyer commented so that we always re-enter a password in the `mr update` use case
 	} else {
 	    // Wrong password - terminate with proper error code
             if( args.verbose )
